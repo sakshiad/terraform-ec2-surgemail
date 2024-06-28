@@ -18,3 +18,8 @@ module "ec2_instance" {
   }
 }
 
+
+resource "aws_eip" "lb" {
+  instance = module.ec2_instance.id
+
+}
